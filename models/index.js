@@ -15,4 +15,4 @@ mongoose.connect(process.env.DB_LINK)
 ;
 
 
-module.exports = require(__dirname + "/todo");
+module.exports.Todo = require("./todo");

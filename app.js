@@ -1,8 +1,8 @@
+
 require("dotenv").config();
 const express = require("express");
 const bodyParser = require("body-parser");
-const todoRoutes = require(__dirname + "/routes/todos");
-const db = require(__dirname + "/models/index");
+const todoRoutes = require(__dirname + "/routes/todos.js");
 
 const app = express();
 
