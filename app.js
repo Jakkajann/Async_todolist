@@ -5,14 +5,15 @@ const bodyParser = require("body-parser");
 const todoRoutes = require(__dirname + "/routes/todos.js");
 
 const app = express();
-
 const port = process.env.PORT;
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use("/api/todos", todoRoutes);
+app.use(express.static(__dirname + "/views"));
+app.use(express.static(__dirname + "/public"));
 
 app.get("/", (req, res) => {
-    res.send("Home root route");
+    res.sendFile("index.html");
 })
 
 app.listen(port, () => {
